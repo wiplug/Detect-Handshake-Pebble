@@ -1,0 +1,17 @@
+{
+  "uuid": "cf5f0dfd-4dd7-467b-9412-301068b5c432",
+  "shortName": "leaf",
+  "longName": "leaf",
+  "companyName": "MakeAwesomeHappen",
+  "versionCode": 1,
+  "versionLabel": "1.0.0",
+  "watchapp": {
+    "watchface": false
+  },
+  "appKeys": {
+    "dummy": 0
+  },
+  "resources": {
+    "media": []
+  }
+}
