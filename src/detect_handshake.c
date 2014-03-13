@@ -11,7 +11,7 @@
  */
 
 #include <pebble.h>
-#include "fft_lib/kiss_fftr.h" //FOR FFT
+#include "fft_lib/kiss_fftr.h" //FOR FFT OPTION
 
 #define WINDOW_SIZE 14 //Accerometer sample window size to capture a full handshake
 #define SAMPLE_RATE ACCEL_SAMPLING_10HZ
