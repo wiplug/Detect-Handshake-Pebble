@@ -1,0 +1,8 @@
+The code in this library depends on the following C library functions which
+need to be placed in this directory, along with all of their dependencies:
+
+#include <stdlib.h>
+#include <stdio.h>
+#include <math.h>
+#include <string.h>
+#include <limits.h>
