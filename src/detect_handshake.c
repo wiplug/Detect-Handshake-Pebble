@@ -191,7 +191,7 @@ void accel_data_handler(AccelData *data, uint32_t num_samples) {
 void handle_init(void) {
   
     //Create a window to display content
-	my_window = window_create();
+    my_window = window_create();
     //Push window onto the window stack
     window_stack_push(my_window, true /* true means use default window load animation */);
     //Create a rendering layer for window
@@ -221,8 +221,8 @@ void handle_init(void) {
 
 //Deinitialization (mem free, etc.) of initialization parameters upon quit 
 void handle_deinit(void) {
-	  text_layer_destroy(text_layer);
-	  window_destroy(my_window);
+      text_layer_destroy(text_layer);
+      window_destroy(my_window);
       accel_data_service_unsubscribe();
 }
 
