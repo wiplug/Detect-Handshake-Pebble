@@ -1,6 +1,6 @@
 LICENSES
   
-  Dynamic Time Warping Library (including helper functions)===
+  Dynamic Time Warping Library (including helper functions)
   
     uWave Related Applications
     Author:    Rice Efficient Computing Group, Rice University
@@ -20,7 +20,7 @@ LICENSES
     
     
     
-  KISS FFT===
+  KISS FFT
 
     Copyright (c) 2003-2010 Mark Borgerding
     
