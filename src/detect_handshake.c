@@ -15,11 +15,11 @@
 
 #define WINDOW_SIZE 14 //Accerometer sample window size to capture a full handshake
 #define SAMPLE_RATE ACCEL_SAMPLING_10HZ
-#define DIMENSION 30   //FOR DTW: Dimension of the accelerometer space
-#define MAX_DISTANCE 1 //FOR DTW: Threshold distance between reference handshake and candidate
+#define DIMENSION 30   //FOR DTW OPTION: Dimension of the accelerometer space
+#define MAX_DISTANCE 1 //FOR DTW OPTION: Threshold distance between reference handshake and candidate
 #define DTW 0
 #define FFT 1
-#define MODE DTW //Choose gesture recognition technique
+#define MODE DTW //Choose gesture recognition option
 
 
 //For displaying content on the watch face.
@@ -106,7 +106,9 @@ TextLayer *text_layer;
 //This handler will be called when enough samples have been received to fill one batch of data
 void accel_data_handler(AccelData *data, uint32_t num_samples) {
 
-    int i, j, distance, *table, **sample, OPTIMAL_SIZE;
+    int i;
+    int j, distance, *table, **sample; //FOR DTW OPTION
+    int OPTIMAL_SIZE; //FOR FFT OPTION
 
     switch(MODE){
 
