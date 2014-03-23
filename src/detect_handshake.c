@@ -11,15 +11,20 @@
 */
 
 #include <pebble.h>
-#include "fft_lib/kiss_fftr.h" //FOR FFT
+#include "fft_lib/kiss_fftr.h" //FOR FFT OPTION
 
 #define WINDOW_SIZE 14 //Accerometer sample window size to capture a full handshake
 #define SAMPLE_RATE ACCEL_SAMPLING_10HZ
+<<<<<<< HEAD
 #define DIMENSION 3   //FOR DTW: Dimension of the accelerometer space
 #define MAX_DISTANCE 500000//FOR DTW: Threshold distance between reference handshake and candidate
+=======
+#define DIMENSION 30   //FOR DTW OPTION: Dimension of the accelerometer space
+#define MAX_DISTANCE 1 //FOR DTW OPTION: Threshold distance between reference handshake and candidate
+>>>>>>> fd7493af76502b2099b5b768572077ed65762c75
 #define DTW 0
 #define FFT 1
-#define MODE DTW //Choose gesture recognition technique
+#define MODE DTW //Choose gesture recognition option
 
 
 //For displaying content on the watch face.
@@ -130,7 +135,13 @@ int distance = 4000000000;
 //This handler will be called when enough samples have been received to fill one batch of data
 void accel_data_handler(AccelData *data, uint32_t num_samples) {
 
+<<<<<<< HEAD
     int i, j, *table, **sample;//, OPTIMAL_SIZE;
+=======
+    int i;
+    int j, distance, *table, **sample; //FOR DTW OPTION
+    int OPTIMAL_SIZE; //FOR FFT OPTION
+>>>>>>> fd7493af76502b2099b5b768572077ed65762c75
 
     switch(MODE){
 
@@ -247,8 +258,12 @@ void handle_init(void) {
 	IS_HANDSHAKE = 0;
 
     //Create a window to display content
+<<<<<<< HEAD
 	my_window = window_create();
     
+=======
+    my_window = window_create();
+>>>>>>> fd7493af76502b2099b5b768572077ed65762c75
     //Push window onto the window stack
     window_stack_push(my_window, true /* true means use default window load animation */);
     
@@ -292,8 +307,13 @@ void handle_init(void) {
 
 //Deinitialization (mem free, etc.) of initialization parameters upon quit 
 void handle_deinit(void) {
+<<<<<<< HEAD
 	  layer_destroy(layer);
 	  window_destroy(my_window);
+=======
+      text_layer_destroy(text_layer);
+      window_destroy(my_window);
+>>>>>>> fd7493af76502b2099b5b768572077ed65762c75
       accel_data_service_unsubscribe();
 }
 
